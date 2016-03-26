@@ -1,6 +1,6 @@
 # canibekiked-api
 
-> API for canibekiked
+> API for [canibekiked](https://github.com/parro-it/canibekiked).
 
 [![Travis Build Status](https://img.shields.io/travis/parro-it/canibekiked-api.svg)](http://travis-ci.org/parro-it/canibekiked-api)
 [![NPM module](https://img.shields.io/npm/v/canibekiked-api.svg)](https://npmjs.org/package/canibekiked-api)
@@ -15,7 +15,25 @@ npm install --save canibekiked-api
 ## Usage
 
 ```js
-  const canibekikedApi = require('canibekiked-api');
+  import canibekiked from 'canibekiked-api';
+  const results = canibekiked();
+
+  results.on('package-checking', ({ name }) => {
+    // name => name of one package that is being checked
+  });
+
+  results.on('package-checked', res => {
+    // res => results object of package check if failed, or false
+    // is package is not registered
+  });
+
+  results.on('end', (passed, failed) => {
+    // passed => number of packages not trademarked
+    // failed => array of details for trademarked packages
+  });
+
+  const checked = results.start();
+  // checked => promise resolved on check end
 ```
 
 # License
