@@ -11,8 +11,9 @@ const authorPackages = pify(_authorPackages);
 
 class Canibekikked extends EventEmitter {
 
-  constructor(user) {
+  constructor(user, { token } = {}) {
     super();
+    this.token = token;
     this.user = user;
   }
 
@@ -51,7 +52,8 @@ class Canibekikked extends EventEmitter {
     let trademarks = null;
 
     try {
-      trademarks = await isTrademarked(name);
+      const options = this.token ? { token: this.token } : undefined;
+      trademarks = await isTrademarked(name, options);
     } catch (err) {
       this.emit('error', err);
       this.exceptions++;
@@ -67,6 +69,6 @@ class Canibekikked extends EventEmitter {
   }
 }
 
-export default function canibekikked(user) {
-  return new Canibekikked(user);
+export default function canibekikked(user, options) {
+  return new Canibekikked(user, options);
 }
