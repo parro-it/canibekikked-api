@@ -1,8 +1,6 @@
-const test = require('tape');
-const canibekikedApi = require('./');
+import test from 'tape-async';
+import canibekiked from './canibekiked';
 
-test('it work!', t => {
-  const result = canibekikedApi();
-  t.equal(result, 42);
-  t.end();
+test('API object is a function', t => {
+  t.equal(typeof canibekiked, 'function');
 });

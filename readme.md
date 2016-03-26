@@ -1,6 +1,6 @@
 # canibekiked-api
 
-
+> API for canibekiked
 
 [![Travis Build Status](https://img.shields.io/travis/parro-it/canibekiked-api.svg)](http://travis-ci.org/parro-it/canibekiked-api)
 [![NPM module](https://img.shields.io/npm/v/canibekiked-api.svg)](https://npmjs.org/package/canibekiked-api)
