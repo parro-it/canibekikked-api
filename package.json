@@ -17,7 +17,7 @@
     "canibekikked"
   ],
   "engines": {
-    "node": ">=0.12"
+    "node": ">=4"
   },
   "dependencies": {
     "is-trademarked": "^1.2.1",
@@ -26,10 +26,10 @@
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
-    "babel-eslint": "^5.0.0",
+    "babel-eslint": "^6.0.0",
     "babel-plugin-syntax-async-functions": "^6.5.0",
     "babel-plugin-transform-async-to-generator": "^6.7.4",
-    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-node5": "^11.0.1",
     "babel-register": "^6.5.2",
     "eslint": "^2.5.1",
     "eslint-config-js": "^5.0.0",
@@ -39,7 +39,7 @@
   },
   "babel": {
     "presets": [
-      "es2015"
+      "node5"
     ],
     "plugins": [
       "transform-async-to-generator",
