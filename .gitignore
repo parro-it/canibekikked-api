@@ -83,3 +83,6 @@ Temporary Items
 
 # Built with babel
 index.js
+
+*.sublime-project
+

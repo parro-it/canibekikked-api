@@ -11,6 +11,11 @@ const authorPackages = pify(_authorPackages);
 
 class Canibekiked extends EventEmitter {
 
+  constructor(user) {
+    super();
+    this.user = user;
+  }
+
   initState() {
     Object.assign(this, {
       failed: [],
@@ -28,8 +33,11 @@ class Canibekiked extends EventEmitter {
     );
   }
 
-  async start(packages) {
+  async start() {
     this.initState();
+
+    const username = this.user || await whoami();
+    const packages = await authorPackages({ username });
 
     await Promise.all(packages.map(
       p => this.checkPackage(p)
@@ -59,12 +67,6 @@ class Canibekiked extends EventEmitter {
   }
 }
 
-export default async function canibekiked(user) {
-  const username = user || await whoami();
-  const packages = await authorPackages({ username });
-
-  const results = new Canibekiked();
-  results.start(packages);
-
-  return results;
+export default function canibekiked(user) {
+  return new Canibekiked(user);
 }
