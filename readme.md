@@ -1,22 +1,22 @@
-# canibekiked-api
+# canibekikked-api
 
-> API for [canibekiked](https://github.com/parro-it/canibekiked).
+> API for [canibekikked](https://github.com/parro-it/canibekikked).
 
-[![Travis Build Status](https://img.shields.io/travis/parro-it/canibekiked-api.svg)](http://travis-ci.org/parro-it/canibekiked-api)
-[![NPM module](https://img.shields.io/npm/v/canibekiked-api.svg)](https://npmjs.org/package/canibekiked-api)
-[![NPM downloads](https://img.shields.io/npm/dt/canibekiked-api.svg)](https://npmjs.org/package/canibekiked-api)
+[![Travis Build Status](https://img.shields.io/travis/parro-it/canibekikked-api.svg)](http://travis-ci.org/parro-it/canibekikked-api)
+[![NPM module](https://img.shields.io/npm/v/canibekikked-api.svg)](https://npmjs.org/package/canibekikked-api)
+[![NPM downloads](https://img.shields.io/npm/dt/canibekikked-api.svg)](https://npmjs.org/package/canibekikked-api)
 
 # Installation
 
 ```bash
-npm install --save canibekiked-api
+npm install --save canibekikked-api
 ```
 
 ## Usage
 
 ```js
-  import canibekiked from 'canibekiked-api';
-  const results = canibekiked();
+  import canibekikked from 'canibekikked-api';
+  const results = canibekikked();
 
   results.on('package-checking', ({ name }) => {
     // name => name of one package that is being checked

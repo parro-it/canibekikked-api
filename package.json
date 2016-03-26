@@ -1,20 +1,20 @@
 {
-  "name": "canibekiked-api",
-  "version": "0.3.1",
-  "description": "API for canibekiked",
-  "repository": "parro-it/canibekiked-api",
+  "name": "canibekikked-api",
+  "version": "1.0.0",
+  "description": "API for canibekikked",
+  "repository": "parro-it/canibekikked-api",
   "license": "MIT",
   "author": "parro-it",
   "scripts": {
     "test": "babel-node test | faucet && eslint .",
-    "build": "babel canibekiked.js > index.js"
+    "build": "babel canibekikked.js > index.js"
   },
   "keywords": [
     "trademark",
     "trademarks",
     "check",
     "registered",
-    "canibekiked"
+    "canibekikked"
   ],
   "engines": {
     "node": ">=0.12"

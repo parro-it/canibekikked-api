@@ -1,19 +1,19 @@
 import test from 'tape-async';
-import canibekiked from './canibekiked';
+import canibekikked from './canibekikked';
 import EventEmitter from 'events';
 
 test('API object is a function', t => {
-  t.equal(typeof canibekiked, 'function');
+  t.equal(typeof canibekikked, 'function');
 });
 
 test('Return a promise to an EventEmitter instance', t => {
-  const results = canibekiked('pkhzzrd');
+  const results = canibekikked('pkhzzrd');
   t.ok(results instanceof EventEmitter);
 });
 
 test('Emit a `package-checking` event for every author package', async (t) => {
   t.plan(1);
-  const results = canibekiked('pkhzzrd');
+  const results = canibekikked('pkhzzrd');
   results.on('package-checking', ({ name }) => {
     t.equal(name, 'statsd');
   });

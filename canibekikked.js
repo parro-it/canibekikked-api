@@ -9,7 +9,7 @@ import _authorPackages  from  'npm-list-author-packages';
 const whoami = pify(_whoami);
 const authorPackages = pify(_authorPackages);
 
-class Canibekiked extends EventEmitter {
+class Canibekikked extends EventEmitter {
 
   constructor(user) {
     super();
@@ -67,6 +67,6 @@ class Canibekiked extends EventEmitter {
   }
 }
 
-export default function canibekiked(user) {
-  return new Canibekiked(user);
+export default function canibekikked(user) {
+  return new Canibekikked(user);
 }
