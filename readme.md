@@ -12,7 +12,7 @@
 npm install --save canibekikked-api
 ```
 
-## Usage
+# Usage
 
 ```js
   import canibekikked from 'canibekikked-api';
