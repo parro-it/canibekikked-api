@@ -11,7 +11,7 @@ const authorPackages = pify(_authorPackages);
 
 class Canibekiked extends EventEmitter {
 
-  constructor() {
+  initState() {
     Object.assign(this, {
       failed: [],
       passed: 0,
@@ -29,6 +29,8 @@ class Canibekiked extends EventEmitter {
   }
 
   async start(packages) {
+    this.initState();
+
     await Promise.all(packages.map(
       p => this.checkPackage(p)
     ));
