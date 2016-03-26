@@ -17,7 +17,7 @@
     "canibekiked"
   ],
   "engines": {
-    "node": ">=5"
+    "node": ">=0.12"
   },
   "dependencies": {
     "is-trademarked": "^1.2.1",
@@ -25,6 +25,7 @@
     "npm-whoami": "^1.1.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.6.5",
     "babel-plugin-syntax-async-functions": "^6.5.0",
     "babel-plugin-transform-async-to-generator": "^6.7.4",
     "babel-preset-node5": "^10.6.0",
